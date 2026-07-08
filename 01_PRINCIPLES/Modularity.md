@@ -6,99 +6,139 @@ Versão: 1.0
 
 # Objetivo
 
-A modularidade define como um sistema é dividido em partes independentes.
+A modularidade é a prática de dividir um sistema em partes independentes, cada uma com uma responsabilidade clara.
 
-Cada módulo possui uma responsabilidade clara, uma fronteira bem definida e a capacidade de evoluir sem impactar os demais.
+Nosso objetivo é construir produtos que possam evoluir continuamente sem exigir reescritas completas.
 
-Nosso objetivo não é criar muitos módulos.
-
-Nosso objetivo é criar módulos com responsabilidades precisas.
+Cada módulo deve ser capaz de crescer, ser substituído ou evoluir sem comprometer o restante do sistema.
 
 ---
 
 # Princípio Fundamental
 
-> Cada módulo deve poder evoluir de forma independente sem exigir mudanças em outros módulos.
+> Um módulo deve fazer apenas uma coisa, e fazê-la muito bem.
 
-Módulos que dependem excessivamente uns dos outros tornam o sistema frágil e difícil de manter.
+Quanto menor for a responsabilidade de um módulo, maior será sua capacidade de evolução.
 
 ---
 
-# Por que existe?
+# Por que a modularidade é importante?
 
-Sistemas sem modularidade tendem a crescer como um bloco único.
+Projetos monolíticos tendem a concentrar muitas responsabilidades em poucos componentes.
 
-Isso resulta em:
+Isso gera:
 
-- dificuldade de isolar problemas;
-- impossibilidade de evoluir partes independentemente;
-- alto risco em cada alteração;
-- aumento do tempo de desenvolvimento;
-- dificuldade de escalar a equipe.
+- alto acoplamento;
+- dificuldade de manutenção;
+- baixa reutilização;
+- aumento do risco em mudanças;
+- dificuldade para trabalhar em equipe.
 
-A modularidade permite que o sistema cresça de forma segura e previsível.
+A modularidade reduz esses problemas ao dividir o sistema em unidades independentes.
+
+---
+
+# O que é um módulo?
+
+Um módulo é uma unidade funcional do sistema.
+
+Ele possui:
+
+- uma responsabilidade específica;
+- regras próprias;
+- documentação própria;
+- interfaces bem definidas;
+- ciclo de vida independente.
+
+Um módulo nunca deve assumir responsabilidades que pertencem a outro.
 
 ---
 
 # Regras
 
-Todo módulo deve possuir:
+Módulos nunca devem acessar diretamente a implementação interna uns dos outros.
 
-- uma única responsabilidade principal;
-- fronteiras claras entre o que é interno e o que é exposto;
-- documentação própria;
-- contrato de comunicação explícito com outros módulos.
+A comunicação deve ocorrer através de contratos claros.
 
-Módulos não devem acessar diretamente a implementação interna de outros módulos.
+Exemplos:
 
-Toda comunicação entre módulos deve ocorrer através de interfaces, APIs ou eventos bem definidos.
+- APIs;
+- Eventos;
+- Interfaces;
+- Serviços compartilhados.
 
-Funcionalidades compartilhadas entre múltiplos módulos devem ser isoladas em módulos compartilhados independentes.
+Novas funcionalidades devem ser adicionadas preferencialmente através da criação ou evolução de módulos existentes.
+
+Evite modificar diversos módulos para resolver um único problema.
+
+Um módulo pode depender de outro apenas quando existir uma necessidade clara. Sempre que possível, compartilhar serviços e interfaces — nunca compartilhar implementação.
+
+Todo módulo deve possuir sua própria estrutura:
+
+```
+Modulo/
+
+README.md
+
+PRD.md
+
+ROADMAP.md
+
+DATABASE.md
+
+API.md
+
+TASKS.md
+
+src/
+```
 
 ---
 
 # Boas Práticas
 
-**Responsabilidade Única** — um módulo faz uma coisa bem feita. Nunca muitas coisas de forma mediana.
+**Responsabilidade Única** — cada módulo resolve apenas um tipo de problema.
 
-**Fronteiras Explícitas** — o que é interno permanece interno. O que é público é documentado como contrato.
+**Baixo Acoplamento** — mudanças em um módulo não devem obrigar alterações em outros módulos.
 
-**Independência** — um módulo deve poder ser testado, evoluído e substituído sem impactar os demais.
+**Alta Coesão** — tudo que existe dentro do módulo deve estar relacionado ao seu objetivo principal.
 
-**Coesão** — tudo que pertence a um módulo deve estar diretamente relacionado ao seu propósito.
+**Independência** — um módulo deve poder ser desenvolvido, testado e evoluído separadamente.
 
-**Composição** — sistemas complexos são construídos pela composição de módulos simples, não pela criação de módulos complexos.
+**Reutilização** — se uma funcionalidade pode ser utilizada por diferentes partes do sistema, ela deve ser transformada em um módulo compartilhado.
 
 ---
 
 # O que evitar
 
-- Criar módulos com múltiplas responsabilidades.
-- Acessar diretamente dados internos de outro módulo.
-- Criar dependências circulares entre módulos.
-- Duplicar lógica que poderia estar em um módulo compartilhado.
-- Criar módulos sem documentação ou sem fronteiras definidas.
-- Ignorar os contratos de comunicação entre módulos.
+- Módulos gigantes com múltiplas responsabilidades.
+- Responsabilidades duplicadas entre módulos.
+- Dependências circulares.
+- Lógica compartilhada por cópia.
+- Módulos sem documentação.
+- Acessar diretamente a implementação interna de outro módulo.
+- Modificar múltiplos módulos para resolver um único problema.
 
 ---
 
 # Checklist
 
-Antes de criar ou aprovar um módulo, confirme:
+Antes de aprovar um módulo, confirme:
 
-- [ ] O módulo possui uma responsabilidade clara.
-- [ ] As fronteiras estão definidas.
-- [ ] O contrato de comunicação está documentado.
-- [ ] O módulo não cria dependências circulares.
-- [ ] Funcionalidades compartilhadas estão isoladas.
-- [ ] O módulo pode evoluir de forma independente.
+- [ ] Possui uma única responsabilidade.
+- [ ] Pode evoluir independentemente.
+- [ ] Possui documentação própria.
+- [ ] Suas dependências são mínimas.
+- [ ] Comunica-se através de contratos claros.
+- [ ] Não duplica responsabilidades de outro módulo.
+- [ ] Pode ser reutilizado quando necessário.
 
 ---
 
 # Regra Final
 
-Um sistema bem modularizado pode crescer indefinidamente.
+Um sistema escalável não cresce adicionando complexidade.
 
-Um sistema sem modularidade eventualmente precisará ser reescrito.
+Ele cresce adicionando módulos bem definidos.
 
-Invista em fronteiras claras desde o início.
+Toda nova funcionalidade deve fortalecer a modularidade do sistema, nunca enfraquecê-la.

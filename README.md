@@ -52,18 +52,15 @@ O ZRO Playbook foi criado para:
 ZRO-PLAYBOOK/
 
 README.md
-
 FOUNDATION.md
 
-skills/
-
-templates/
-
-checklists/
-
-prompts/
-
-examples/
+00_META/
+01_PRINCIPLES/
+02_SKILLS/
+03_TEMPLATES/
+04_CHECKLISTS/
+05_PROMPTS/
+06_EXAMPLES/
 ```
 
 ---

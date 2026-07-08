@@ -54,21 +54,64 @@ Ao final desta etapa devemos responder:
 
 # Processo
 
-## Etapa 1 — Identificar os Domínios
+## Etapa 1 — Construir o Mapa de Domínios
 
-Divida o produto em grandes áreas de responsabilidade.
+O Mapa de Domínios é um conceito próprio da ZRO.
 
-Exemplos:
+Antes de qualquer banco de dados, API ou código, todo produto deve possuir um mapa visual que organiza suas responsabilidades em domínios.
 
-- Autenticação
-- Usuários
-- Pagamentos
-- Conteúdo
-- CRM
-- Relatórios
-- Inteligência Artificial
+Um domínio representa uma grande área de responsabilidade de negócio.
 
-Cada domínio representa uma responsabilidade de negócio.
+Cada domínio contém módulos.
+
+Cada módulo possui uma responsabilidade única.
+
+### Estrutura do Mapa de Domínios
+
+```
+Produto
+
+├── Domínio Comercial
+│   ├── Leads
+│   ├── CRM
+│   └── Vendas
+│
+├── Domínio Operacional
+│   ├── Agenda
+│   ├── Atendimento
+│   └── Automações
+│
+├── Domínio Inteligência
+│   ├── IA
+│   ├── Relatórios
+│   └── Insights
+│
+└── Domínio Plataforma
+    ├── Usuários
+    ├── Permissões
+    └── Configurações
+```
+
+### Regras do Mapa de Domínios
+
+- Todo produto deve ter no mínimo um mapa antes da arquitetura técnica.
+- Cada módulo deve pertencer a exatamente um domínio.
+- Domínios não se comunicam diretamente — comunicam-se através de contratos.
+- O mapa deve poder ser lido por qualquer pessoa, sem conhecimento técnico.
+- Quando um domínio cresce demais, ele deve ser dividido.
+
+### Domínios Comuns
+
+| Domínio | Responsabilidade |
+|---------|-----------------|
+| Plataforma | Usuários, permissões, configurações, autenticação |
+| Comercial | Leads, CRM, vendas, cupons, pagamentos |
+| Operacional | Agenda, atendimento, automações, processos |
+| Conteúdo | Artigos, mídia, publicações, biblioteca |
+| Inteligência | IA, relatórios, analytics, insights |
+| Integrações | APIs externas, webhooks, conectores |
+
+Adapte os domínios à realidade de cada produto.
 
 ---
 
@@ -206,12 +249,12 @@ Cada nível possui responsabilidades próprias.
 
 Ao concluir esta etapa devem existir:
 
-- mapa de módulos;
-- mapa de domínios;
+- **Mapa de Domínios** — visão hierárquica de domínios e módulos;
+- mapa de módulos com responsabilidades;
 - diagrama de arquitetura;
 - fluxos principais;
 - integrações;
-- responsabilidades.
+- matriz de responsabilidades.
 
 ---
 

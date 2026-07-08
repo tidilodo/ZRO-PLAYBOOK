@@ -259,6 +259,53 @@ Evite:
 
 ---
 
+# Context Score
+
+O Context Score é um critério objetivo da ZRO para avaliar se um projeto está preparado para desenvolvimento assistido por IA.
+
+Antes de permitir qualquer implementação automatizada, o projeto deve atingir pontuação mínima.
+
+## Tabela de Pontuação
+
+| Documento | Obrigatório | Peso |
+|-----------|-------------|------|
+| Vision | ✅ | 20 |
+| Architecture | ✅ | 20 |
+| Business Rules | ✅ | 15 |
+| Glossary | ✅ | 10 |
+| ADRs | ✅ | 10 |
+| Database | ✅ | 10 |
+| Roadmap | ✅ | 10 |
+| Module Docs | ✅ | 5 |
+
+**Pontuação máxima: 100**
+
+## Critério de Liberação
+
+| Pontuação | Status | Ação permitida |
+|-----------|--------|----------------|
+| 0 – 59 | ❌ Insuficiente | Não implementar. Completar documentação. |
+| 60 – 79 | ⚠️ Parcial | Apenas protótipos exploratórios. Nada em produção. |
+| 80 – 100 | ✅ Pronto | Desenvolvimento assistido por IA liberado. |
+
+## Como calcular
+
+Marque cada documento como presente (✅) ou ausente (❌).
+
+Some os pesos dos documentos presentes.
+
+O total é o Context Score do projeto.
+
+## Regra
+
+Nenhuma IA deve iniciar implementação em um projeto com Context Score abaixo de 60.
+
+Projetos com score entre 60 e 79 podem receber protótipos, mas não código de produção.
+
+Score 80 ou superior indica que o projeto possui contexto suficiente para desenvolvimento assistido por IA de forma segura e consistente.
+
+---
+
 # Critérios para Encerramento
 
 Esta etapa termina quando:
@@ -268,6 +315,7 @@ Esta etapa termina quando:
 - [ ] As regras de negócio foram registradas.
 - [ ] As decisões arquiteturais estão documentadas.
 - [ ] A estrutura documental está organizada.
+- [ ] O Context Score foi calculado e está acima de 80.
 - [ ] Uma IA consegue compreender o projeto apenas lendo a documentação.
 
 ---

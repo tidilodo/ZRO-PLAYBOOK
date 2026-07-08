@@ -1,64 +1,239 @@
-# ZRO Foundation
+# ZRO FOUNDATION
 
-## Missão
-
-Construir produtos digitais com foco, coerência e velocidade.
+Versão: 1.0
 
 ---
 
-## Como trabalhamos
+# Nossa Filosofia
 
-Todo produto ZRO nasce de documentação, não de código.
+Acreditamos que grandes produtos não nascem de código.
 
-Antes de qualquer implementação, o contexto precisa existir.
+Eles nascem de clareza.
 
-O contexto protege o produto de crescer sem direção.
+Nosso trabalho não é escrever software.
 
----
+Nosso trabalho é resolver problemas reais através de sistemas bem projetados.
 
-## Os dois repositórios que sustentam tudo
-
-### ZRO-PLAYBOOK
-
-A inteligência da empresa.
-
-Contém a metodologia, os templates, os checklists e os prompts que orientam cada novo produto.
-
-Não muda com frequência.
-
-Quando muda, é porque aprendemos algo novo que vale para todos os produtos.
-
-### Cada produto (ex: ORACULO-OS, CRM, STUDIO)
-
-Usa o Playbook como ponto de partida.
-
-Nunca começa do zero — começa pelos templates.
-
-Nunca começa pelo código — começa pela documentação.
+O código é apenas uma consequência.
 
 ---
 
-## A sequência de qualquer novo produto
+# Nossa Missão
 
-```
-1. Criar repositório do produto
-2. Copiar templates de ZRO-PLAYBOOK/skills/product-context-engineering/templates/
-3. Preencher os templates com a realidade do produto
-4. Quebrar em tarefas executáveis
-5. Somente agora: implementar
-```
+Construir produtos digitais que permaneçam relevantes por muitos anos.
+
+Cada projeto deve ser capaz de evoluir continuamente sem perder sua identidade.
 
 ---
 
-## O que nunca fazemos
+# Nossa Forma de Trabalhar
 
-- Iniciar pelo código
-- Documentar depois de implementar
-- Criar funcionalidades sem tarefa documentada
-- Tomar decisões técnicas sem registrar o motivo
+Antes de implementar:
+
+Compreender.
+
+Antes de desenvolver:
+
+Projetar.
+
+Antes de decidir:
+
+Documentar.
+
+Antes de automatizar:
+
+Validar.
 
 ---
 
-## Princípio
+# Nosso Processo
 
-> A velocidade real vem da clareza, não da pressa.
+Todo projeto segue obrigatoriamente esta sequência.
+
+Ideia
+
+↓
+
+Pesquisa
+
+↓
+
+Visão
+
+↓
+
+Arquitetura
+
+↓
+
+Modelagem
+
+↓
+
+Planejamento
+
+↓
+
+Implementação
+
+↓
+
+Testes
+
+↓
+
+Deploy
+
+↓
+
+Evolução
+
+Nenhuma etapa pode ser ignorada.
+
+---
+
+# Princípios
+
+## Clareza acima da velocidade.
+
+## Simplicidade acima da complexidade.
+
+## Arquitetura acima de funcionalidades.
+
+## Contexto acima de prompts.
+
+## Evolução acima de reconstrução.
+
+## Modularidade acima de acoplamento.
+
+## Documentação acima de memória.
+
+## Sistemas acima de ferramentas.
+
+---
+
+# Fonte da Verdade
+
+A documentação representa a verdade oficial do projeto.
+
+Quando houver conflito entre documentação e código:
+
+A documentação prevalece.
+
+---
+
+# Decisões
+
+Toda decisão arquitetural deve ser registrada.
+
+Nunca confiar apenas na memória.
+
+---
+
+# Modularidade
+
+Todo sistema deve ser composto por módulos independentes.
+
+Cada módulo possui:
+
+Uma responsabilidade.
+
+Uma documentação.
+
+Um ciclo de vida.
+
+Uma estratégia de evolução.
+
+---
+
+# Inteligência Artificial
+
+A IA é um membro da equipe.
+
+Ela auxilia.
+
+Sugere.
+
+Automatiza.
+
+Documenta.
+
+Mas nunca substitui o Product Owner.
+
+---
+
+# Product Owner
+
+O Product Owner define:
+
+Visão.
+
+Prioridades.
+
+Estratégia.
+
+Arquitetura.
+
+Objetivos.
+
+A IA implementa.
+
+Nunca decide.
+
+---
+
+# Regra Fundamental
+
+Nenhuma implementação pode começar sem contexto suficiente.
+
+Se faltar contexto:
+
+Pare.
+
+Documente.
+
+Pergunte.
+
+Somente depois implemente.
+
+---
+
+# Nosso Objetivo
+
+Construir produtos capazes de evoluir durante muitos anos mantendo:
+
+Consistência.
+
+Qualidade.
+
+Escalabilidade.
+
+Legibilidade.
+
+Manutenibilidade.
+
+---
+
+# Definição de Qualidade
+
+Um projeto é considerado de qualidade quando:
+
+Pode ser compreendido rapidamente.
+
+Pode ser evoluído sem grandes refatorações.
+
+Possui documentação completa.
+
+Possui arquitetura consistente.
+
+Possui responsabilidades claras.
+
+---
+
+# Regra Final
+
+Sempre construir pensando que outra pessoa continuará esse projeto daqui a cinco anos.
+
+Essa pessoa pode ser um desenvolvedor.
+
+Ou uma Inteligência Artificial.

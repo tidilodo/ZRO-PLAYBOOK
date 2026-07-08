@@ -6,102 +6,179 @@ Versão: 1.0
 
 # Objetivo
 
-Decisões arquiteturais, técnicas e de produto moldam o futuro de cada projeto.
+Este documento define como decisões técnicas, arquiteturais e de produto devem ser tomadas, registradas e comunicadas.
 
-Registrá-las garante que o raciocínio por trás de cada escolha permaneça acessível — independentemente de quem estiver trabalhando no projeto no futuro.
+Nosso objetivo é garantir que todas as decisões importantes sejam transparentes, rastreáveis e compreensíveis ao longo do tempo.
 
-Nosso objetivo não é registrar todas as decisões.
-
-Nosso objetivo é registrar as decisões que influenciam o projeto a longo prazo.
+Nenhuma decisão relevante deve depender exclusivamente da memória de uma pessoa.
 
 ---
 
 # Princípio Fundamental
 
-> Toda decisão importante deve ser registrada com contexto, alternativas consideradas e justificativa.
+> Toda decisão importante deve possuir contexto, justificativa e consequências documentadas.
 
-Decisões tomadas sem registro criam dívida de conhecimento.
-
-Com o tempo, ninguém sabe mais por que o sistema funciona de determinada forma.
+A qualidade de um projeto não depende apenas das decisões tomadas, mas da capacidade de compreender por que elas foram tomadas.
 
 ---
 
-# Por que existe?
+# Por que registrar decisões?
 
-Equipes e projetos mudam.
+Registrar decisões permite:
 
-Quando decisões não são registradas:
+- preservar conhecimento;
+- reduzir retrabalho;
+- acelerar onboarding;
+- evitar discussões repetidas;
+- facilitar futuras revisões;
+- manter consistência arquitetural.
 
-- o mesmo debate é travado repetidamente;
-- decisões são revertidas sem entender suas consequências;
-- novas pessoas perdem tempo reconstruindo raciocínios já feitos;
-- a IA não consegue compreender o porquê das escolhas existentes.
+Decisões documentadas tornam o projeto previsível.
 
-O registro de decisões elimina esses problemas.
+---
+
+# O que é uma decisão?
+
+Uma decisão é qualquer escolha que impacte a arquitetura, o produto ou o processo de desenvolvimento.
+
+Exemplos:
+
+- escolha da stack tecnológica;
+- definição da arquitetura;
+- adoção de uma biblioteca;
+- criação de um novo módulo;
+- alteração de um fluxo crítico;
+- mudança de regras de negócio;
+- integração com serviços externos.
+
+Pequenas implementações locais normalmente não exigem registro.
 
 ---
 
 # Regras
 
-Toda decisão significativa deve ser registrada antes de ser implementada.
+Uma decisão deve ser registrada quando:
 
-Um registro de decisão deve conter:
+- altera a arquitetura;
+- cria dependências permanentes;
+- modifica regras importantes;
+- impacta múltiplos módulos;
+- influencia futuras implementações;
+- possui alternativas relevantes.
 
-- **Contexto** — qual situação motivou a decisão.
-- **Decisão** — o que foi decidido.
-- **Alternativas** — o que foi considerado e descartado.
-- **Justificativa** — por que esta opção foi escolhida.
-- **Consequências** — o que muda a partir desta decisão.
-- **Status** — proposta, aceita ou revisada.
+Toda decisão deve seguir o padrão ADR (Architecture Decision Record):
 
-Decisões aceitas não devem ser revertidas sem um novo registro documentando a mudança.
+```
+Número
+
+Título
+
+Status
+
+Data
+
+---
+
+## Contexto
+
+Qual problema motivou esta decisão?
+
+---
+
+## Alternativas
+
+Quais opções foram consideradas?
+
+---
+
+## Decisão
+
+Qual opção foi escolhida?
+
+---
+
+## Justificativa
+
+Por que essa opção foi escolhida?
+
+---
+
+## Consequências
+
+Quais benefícios?
+
+Quais limitações?
+
+Quais riscos?
+
+---
+
+## Próxima revisão
+
+Quando esta decisão deverá ser reavaliada?
+```
+
+Todas as decisões devem ser armazenadas em:
+
+```
+/decisions
+
+0001-nome-da-decisao.md
+
+0002-outra-decisao.md
+```
+
+A numeração nunca deve ser alterada.
+
+Uma decisão nunca deve ser editada para representar outra realidade. Caso seja necessário alterar uma decisão existente, manter o documento original, criar uma nova decisão e referenciar a anterior. O histórico deve ser preservado.
+
+A IA nunca deve alterar decisões arquiteturais sem autorização explícita do Product Owner. Antes de sugerir mudanças, a IA deve consultar decisões anteriores, avaliar impactos, apresentar alternativas e justificar a recomendação.
 
 ---
 
 # Boas Práticas
 
-**Registrar antes de implementar** — a decisão deve existir antes do código.
+**Clara** — qualquer pessoa deve compreender rapidamente.
 
-**Ser objetivo** — o registro deve ser direto. Não é necessário escrever um texto longo.
+**Justificada** — explicar por que foi escolhida, não apenas o que foi escolhido.
 
-**Incluir o que foi descartado** — as alternativas rejeitadas são tão importantes quanto a escolha final.
+**Objetiva** — evitar excesso de detalhes desnecessários.
 
-**Manter o histórico** — decisões antigas não devem ser apagadas, apenas atualizadas com novo status.
+**Revisável** — nenhuma decisão é definitiva. Toda decisão pode evoluir quando existir uma justificativa melhor.
 
-**Conectar com a documentação** — toda decisão deve referenciar o documento que ela impacta.
+**Rastreável** — sempre deve ser possível descobrir quando foi tomada, quem aprovou e por que foi tomada.
 
 ---
 
 # O que evitar
 
-- Tomar decisões importantes apenas verbalmente.
-- Implementar antes de registrar.
-- Apagar registros antigos.
-- Reverter decisões sem documentar o motivo.
-- Registrar apenas a decisão sem o contexto que a motivou.
-- Criar registros vagos que não explicam o raciocínio.
+- Decisões implícitas não documentadas.
+- Mudanças arquiteturais sem registro.
+- Justificativas vagas ou ausentes.
+- Alterações silenciosas em decisões existentes.
+- Apagar o histórico de decisões anteriores.
+- Permitir que a IA altere decisões sem aprovação humana.
 
 ---
 
 # Checklist
 
-Antes de implementar qualquer decisão significativa, confirme:
+Antes de aprovar uma decisão, confirme:
 
-- [ ] O contexto está documentado.
-- [ ] A decisão está clara.
-- [ ] As alternativas consideradas estão listadas.
-- [ ] A justificativa está registrada.
-- [ ] As consequências foram mapeadas.
-- [ ] O status está definido.
+- [ ] O problema está claramente definido.
+- [ ] As alternativas foram avaliadas.
+- [ ] A decisão está documentada.
+- [ ] As consequências foram registradas.
+- [ ] Existe uma justificativa clara.
+- [ ] A documentação foi atualizada.
+- [ ] Os módulos impactados foram identificados.
 
 ---
 
 # Regra Final
 
-Decisões sem registro são conhecimento que a empresa não possui.
+Decisões documentadas constroem conhecimento.
 
-Registre o raciocínio.
+Conhecimento compartilhado constrói produtos duradouros.
 
-O código pode ser lido.
-
-O raciocínio precisa ser escrito.
+Nunca permita que uma decisão importante exista apenas na memória de uma pessoa.

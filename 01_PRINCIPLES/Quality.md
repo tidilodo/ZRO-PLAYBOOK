@@ -6,104 +6,114 @@ Versão: 1.0
 
 # Objetivo
 
-Qualidade não é um estágio final.
+Este documento define o padrão oficial de qualidade utilizado pela empresa.
 
-É uma característica presente em cada decisão, cada linha de código e cada documento produzido ao longo do projeto.
+Qualidade não é apenas ausência de erros.
 
-Nosso objetivo não é atingir qualidade perfeita.
+Qualidade é a capacidade de um produto permanecer consistente, compreensível e evolutivo durante todo o seu ciclo de vida.
 
-Nosso objetivo é construir sistemas que possam ser compreendidos, mantidos e evoluídos por anos.
+Toda decisão deve aumentar a qualidade do sistema.
+
+Nunca reduzi-la.
 
 ---
 
 # Princípio Fundamental
 
-> Um projeto de qualidade pode ser compreendido rapidamente, evoluído sem grandes refatorações e mantido por qualquer pessoa com acesso à sua documentação.
+> Qualidade é a soma de boas decisões repetidas continuamente.
 
-Qualidade não é sobre ausência de bugs.
+Não existe qualidade em apenas uma parte do projeto.
 
-Qualidade é sobre clareza, consistência e evolução contínua.
+Ela deve estar presente na arquitetura, na documentação, no código, na experiência do usuário e nos processos.
 
 ---
 
-# Por que existe?
+# Nossa Definição de Qualidade
 
-Projetos sem critério de qualidade acumulam problemas silenciosamente.
+Um produto possui qualidade quando:
 
-Isso resulta em:
-
-- código difícil de entender;
-- funcionalidades que quebram outras ao serem modificadas;
-- documentação desatualizada ou inexistente;
-- aumento exponencial do custo de manutenção;
-- necessidade de reescrita completa em algum momento.
-
-Qualidade é o que permite que um projeto continue crescendo sem se tornar um fardo.
+- resolve corretamente o problema do usuário;
+- possui arquitetura consistente;
+- é fácil de compreender;
+- é fácil de manter;
+- é fácil de evoluir;
+- possui documentação atualizada;
+- apresenta comportamento previsível;
+- reduz riscos de mudanças futuras.
 
 ---
 
 # Regras
 
-Todo entregável — código, documentação ou decisão — deve ser revisado antes de ser considerado concluído.
+Toda entrega deve passar por revisão considerando:
 
-Um projeto é considerado de qualidade quando:
+**Produto** — resolve o problema corretamente?
 
-- pode ser compreendido rapidamente por alguém novo;
-- pode ser evoluído sem grandes refatorações;
-- possui documentação completa e atualizada;
-- possui arquitetura consistente;
-- possui responsabilidades claras entre os módulos.
+**Arquitetura** — respeita os princípios arquiteturais?
 
-Qualidade não pode ser adicionada depois.
+**Código** — está legível e organizado?
 
-Ela deve estar presente desde o início.
+**Documentação** — foi atualizada?
+
+**Testes** — os cenários críticos foram validados?
+
+**Experiência** — a solução é simples para o usuário?
+
+Uma funcionalidade só é considerada concluída quando atende aos requisitos, possui documentação atualizada, respeita os princípios do Playbook, foi revisada e pode ser mantida por outra pessoa sem necessidade de explicações adicionais.
+
+A IA nunca deve criar complexidade desnecessária, gerar código sem contexto, modificar arquitetura sem justificativa ou reduzir a legibilidade do sistema. Toda sugestão deve tornar o projeto mais simples e consistente.
 
 ---
 
 # Boas Práticas
 
-**Clareza** — prefira código e documentação simples e diretos a soluções inteligentes e difíceis de entender.
+**Produto** — as funcionalidades possuem propósito claro. Nada é desenvolvido sem justificativa.
 
-**Consistência** — padrões definidos devem ser seguidos em todo o projeto, sem exceções não documentadas.
+**Arquitetura** — a arquitetura permanece simples. Os módulos possuem responsabilidades bem definidas.
 
-**Revisão** — toda entrega deve ser revisada antes de ser considerada concluída.
+**Código** — legível, organizado, reutilizável, testável e consistente. Código inteligente é aquele que outra pessoa consegue compreender rapidamente.
 
-**Testes** — funcionalidades críticas devem possuir validação antes do deploy.
+**Documentação** — toda funcionalidade relevante possui documentação correspondente e atualizada.
 
-**Evolução gradual** — melhorias de qualidade devem ser incrementais, não reconstruções completas.
+**Experiência** — toda interface deve ser simples, intuitiva, consistente, acessível e previsível.
 
-**Contexto para a IA** — um projeto de qualidade fornece contexto suficiente para que a IA trabalhe com precisão e sem improvisação.
+**Performance** — primeiro garantir clareza. Depois otimizar quando necessário. Otimizações prematuras devem ser evitadas.
+
+**Segurança** — toda funcionalidade deve considerar autenticação, autorização, proteção de dados, validação de entradas e tratamento de erros. Segurança faz parte da qualidade, não é uma etapa separada.
 
 ---
 
 # O que evitar
 
-- Aceitar entregas sem revisão.
-- Priorizar velocidade em detrimento da clareza.
-- Criar soluções complexas para problemas simples.
-- Ignorar inconsistências de padrão ao longo do projeto.
-- Acumular débito técnico sem registro.
-- Considerar qualidade como etapa final, e não como prática contínua.
+- Soluções temporárias que se tornam permanentes.
+- Duplicação de código.
+- Responsabilidades misturadas.
+- Documentação incompleta ou desatualizada.
+- Complexidade desnecessária.
+- Funcionalidades sem propósito claro.
+- Considerar qualidade como etapa final do desenvolvimento.
 
 ---
 
 # Checklist
 
-Antes de considerar qualquer entrega concluída, confirme:
+Antes de considerar uma entrega concluída:
 
-- [ ] O código pode ser compreendido sem explicação adicional.
-- [ ] A documentação está atualizada.
-- [ ] Os padrões do projeto foram seguidos.
-- [ ] Funcionalidades críticas foram validadas.
-- [ ] Não foram introduzidas regressões.
-- [ ] As responsabilidades permanecem claras.
+- [ ] Resolve o problema corretamente.
+- [ ] Respeita a arquitetura.
+- [ ] Mantém baixo acoplamento.
+- [ ] Não cria duplicação.
+- [ ] Está documentada.
+- [ ] É compreensível.
+- [ ] Pode evoluir facilmente.
+- [ ] Foi revisada.
 
 ---
 
 # Regra Final
 
-Qualidade não é um esforço extra.
+Qualidade não é uma etapa do desenvolvimento.
 
-É o padrão mínimo de tudo que entregamos.
+Qualidade é a forma como desenvolvemos.
 
-Construa pensando que outra pessoa — humana ou IA — continuará este projeto daqui a cinco anos.
+Toda decisão deve tornar o sistema mais simples, mais consistente e mais preparado para evoluir.

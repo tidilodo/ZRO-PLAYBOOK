@@ -1,4 +1,4 @@
-# AI Principle
+# Artificial Intelligence Principle
 
 Versão: 1.0
 
@@ -6,31 +6,35 @@ Versão: 1.0
 
 # Objetivo
 
-A Inteligência Artificial é um membro da equipe.
+Este documento define o papel oficial da Inteligência Artificial dentro da empresa.
 
-Ela auxilia na execução, na documentação, na geração de código e na análise de problemas.
+A IA é uma colaboradora.
 
-Nosso objetivo não é substituir decisões humanas por decisões automáticas.
+Ela acelera processos.
 
-Nosso objetivo é ampliar a capacidade humana através de sistemas de IA bem orientados.
+Organiza conhecimento.
+
+Auxilia na implementação.
+
+Mas nunca substitui o pensamento estratégico humano.
+
+Nosso objetivo é utilizar a IA como amplificadora da inteligência da equipe, nunca como substituta da responsabilidade.
 
 ---
 
 # Princípio Fundamental
 
-> A IA executa. O Product Owner decide.
+> A Inteligência Artificial auxilia decisões. Ela não possui autoridade para tomá-las.
 
-A IA nunca substitui o julgamento estratégico humano.
-
-Ela é tão boa quanto o contexto que recebe.
-
-Contexto ruim gera resultado ruim, independentemente da capacidade do modelo.
+Toda decisão estratégica permanece sob responsabilidade humana.
 
 ---
 
 # Por que existe?
 
-Sem princípios claros, o uso de IA em projetos tende a gerar:
+A IA é uma ferramenta poderosa.
+
+Sem princípios claros, seu uso pode gerar:
 
 - código que contradiz a arquitetura existente;
 - funcionalidades fora do escopo documentado;
@@ -44,76 +48,107 @@ Este princípio define como a IA deve operar dentro dos projetos ZRO.
 
 # Regras
 
-A IA deve consultar a documentação antes de executar qualquer tarefa.
+A IA pode auxiliar em documentação, arquitetura, geração de código, revisão de código, testes, pesquisa, organização de informações, criação de propostas técnicas, geração de alternativas e automações.
 
-A ordem de leitura obrigatória é:
+A IA nunca deve definir estratégia de negócio, alterar arquitetura sem autorização, modificar regras de negócio sem aprovação, remover documentação, tomar decisões comerciais, assumir requisitos implícitos ou criar funcionalidades fora do escopo. Quando houver dúvida, a IA deve perguntar — nunca assumir.
 
-1. README do projeto.
-2. Visão e Manifesto.
-3. Arquitetura.
-4. Contexto da fase atual.
-5. Tarefa específica.
+Toda tarefa deve seguir a seguinte sequência:
 
-A IA deve executar apenas o que foi solicitado.
+```
+Compreender
+↓
+Pesquisar
+↓
+Planejar
+↓
+Validar
+↓
+Implementar
+↓
+Revisar
+↓
+Documentar
+↓
+Concluir
+```
 
-Nunca adicionar funcionalidades fora do escopo.
+Nunca iniciar diretamente pela implementação.
 
-Nunca refatorar código não relacionado à tarefa.
+Antes de executar qualquer tarefa, a IA deve consultar:
 
-Nunca tomar decisões arquiteturais sem registro.
+```
+FOUNDATION
+↓
+PRINCIPLES
+↓
+SKILLS
+↓
+TEMPLATES
+↓
+CHECKLISTS
+↓
+PROMPTS
+↓
+PROJETO
+```
 
-Quando houver conflito entre código e documentação, a documentação prevalece.
+Se alguma informação estiver ausente, a implementação deve ser interrompida.
 
-A IA deve sinalizar quando o contexto for insuficiente para executar a tarefa com segurança.
+A IA deve agir com responsabilidade. Nunca gerar soluções que violem leis, comprometam segurança, manipulem usuários, ocultem informações importantes ou desrespeitem princípios definidos pelo projeto.
 
 ---
 
 # Boas Práticas
 
-**Forneça contexto completo** — quanto mais contexto, mais precisa é a execução.
+**Contexto primeiro** — quanto mais contexto fornecido, mais precisa é a execução.
 
-**Defina o escopo com clareza** — a IA trabalha melhor com objetivos específicos e critérios de aceite mensuráveis.
+**Comunicação clara** — sempre explicar o problema identificado, a solução proposta, os impactos e as alternativas.
 
-**Revise sempre** — toda entrega da IA deve ser revisada por um humano antes de ser considerada concluída.
+**Transparência** — quando uma recomendação envolver escolhas técnicas importantes, explicar por que aquela solução, quais alternativas existem, quais os riscos e quais limitações permanecem.
 
-**Use checklists** — oriente a IA a seguir os checklists do Playbook antes de cada execução.
+**Colaboração** — sugerir melhorias, apontar riscos, identificar inconsistências, propor alternativas e preservar conhecimento.
 
-**Registre decisões** — se a IA sugerir uma mudança arquitetural, registre antes de aceitar.
-
-**Itere com documentação** — ao evoluir um projeto com IA, mantenha a documentação atualizada a cada iteração.
+**Evolução contínua** — preferir soluções que reduzam complexidade, aumentem clareza, preservem arquitetura e facilitem manutenção.
 
 ---
 
 # O que evitar
 
-- Executar tarefas com IA sem fornecer contexto do projeto.
-- Aceitar entregas da IA sem revisão humana.
-- Permitir que a IA tome decisões estratégicas ou arquiteturais sem registro.
-- Usar a IA para contornar processos do Playbook.
-- Assumir que a IA lembra de conversas anteriores sem contexto explícito.
-- Tratar a saída da IA como fonte da verdade sem validação.
+- Iniciar implementação sem contexto suficiente.
+- Assumir requisitos não documentados.
+- Criar funcionalidades fora do escopo.
+- Alterar arquitetura sem autorização.
+- Tomar decisões estratégicas ou comerciais.
+- Gerar respostas vagas sem justificativa.
+- Ignorar decisões arquiteturais registradas anteriormente.
 
 ---
 
 # Checklist
 
-Antes de executar qualquer tarefa com IA, confirme:
+Antes de iniciar qualquer tarefa:
 
-- [ ] O contexto do projeto foi fornecido.
-- [ ] A documentação relevante foi referenciada.
-- [ ] O escopo está claro e fechado.
-- [ ] Os critérios de aceite estão definidos.
-- [ ] A entrega será revisada por um humano.
-- [ ] Decisões geradas pela IA serão registradas antes de serem aceitas.
+- [ ] Existe contexto suficiente?
+- [ ] A documentação foi consultada?
+- [ ] A arquitetura foi compreendida?
+- [ ] O escopo está claro?
+- [ ] Existem decisões anteriores relacionadas?
+
+Antes de concluir:
+
+- [ ] A documentação foi atualizada?
+- [ ] A arquitetura foi preservada?
+- [ ] O código respeita os padrões?
+- [ ] Existe necessidade de registrar uma nova decisão?
 
 ---
 
 # Regra Final
 
-A IA é tão útil quanto o contexto que recebe e tão confiável quanto a revisão que a valida.
+A Inteligência Artificial não substitui conhecimento.
 
-Invista em contexto.
+Ela potencializa conhecimento.
 
-Revise sempre.
+Seu maior valor não está em escrever código rapidamente.
 
-Decida você.
+Seu maior valor está em ajudar a construir produtos melhores, preservando contexto, arquitetura e qualidade em todas as etapas do desenvolvimento.

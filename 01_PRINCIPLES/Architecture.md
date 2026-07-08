@@ -26,7 +26,7 @@ Arquitetura existe para reduzir complexidade.
 
 ---
 
-# Por que a arquitetura é importante?
+# Por que existe?
 
 Projetos sem arquitetura tendem a crescer de forma desorganizada.
 
@@ -42,7 +42,7 @@ Uma boa arquitetura reduz esses problemas antes que eles existam.
 
 ---
 
-# Responsabilidades da Arquitetura
+# Regras
 
 Toda arquitetura deve responder claramente:
 
@@ -54,150 +54,51 @@ Toda arquitetura deve responder claramente:
 
 Se essas respostas não estiverem claras, a arquitetura ainda não está pronta.
 
----
-
-# Princípios Arquiteturais
-
-## Separação de Responsabilidades
-
-Cada componente deve possuir apenas uma responsabilidade principal.
-
-Evite componentes que concentram muitas funções.
-
----
-
-## Baixo Acoplamento
-
-Os módulos devem depender o mínimo possível uns dos outros.
-
-Mudanças em um módulo não devem causar efeitos inesperados em outros.
-
----
-
-## Alta Coesão
-
-Tudo que pertence a um módulo deve estar relacionado ao seu propósito.
-
-Evite funcionalidades sem relação direta com a responsabilidade do módulo.
-
----
-
-## Evolução Contínua
-
-A arquitetura deve permitir crescimento incremental.
-
-Nunca exigir reconstruções completas para adicionar novas funcionalidades.
-
----
-
-## Simplicidade
-
-A solução mais simples que resolve corretamente o problema deve ser a preferida.
-
-Complexidade só é aceitável quando existe uma necessidade clara.
-
----
-
-# Camadas
-
-Sempre que possível, separar o sistema em camadas com responsabilidades bem definidas.
-
-Exemplo:
+Sempre que possível, separar o sistema em camadas com responsabilidades bem definidas:
 
 ```
 Interface
-
 ↓
-
 Aplicação
-
 ↓
-
 Domínio
-
 ↓
-
 Infraestrutura
-
 ↓
-
 Persistência
 ```
 
-Cada camada possui responsabilidades próprias e não deve assumir funções de outra.
+Todo sistema deve ser dividido em módulos independentes. Cada módulo deve possuir responsabilidade única, documentação própria e possibilidade de evolução independente.
+
+A comunicação entre módulos deve ser explícita, através de contratos bem definidos: APIs, eventos, serviços compartilhados ou interfaces. Nunca acessar diretamente a implementação interna de outro módulo.
 
 ---
 
-# Modularidade
+# Boas Práticas
 
-Todo sistema deve ser dividido em módulos independentes.
+**Separação de Responsabilidades** — cada componente deve possuir apenas uma responsabilidade principal.
 
-Cada módulo deve possuir:
+**Baixo Acoplamento** — mudanças em um módulo não devem causar efeitos inesperados em outros.
 
-- responsabilidade única;
-- documentação própria;
-- regras próprias;
-- possibilidade de evolução independente.
+**Alta Coesão** — tudo que pertence a um módulo deve estar relacionado ao seu propósito.
 
----
+**Evolução Contínua** — a arquitetura deve permitir crescimento incremental sem exigir reconstruções completas.
 
-# Comunicação entre Módulos
+**Reutilização** — funcionalidades utilizadas por mais de um módulo devem ser isoladas em componentes compartilhados.
 
-A comunicação deve ser explícita.
-
-Evite dependências ocultas.
-
-Toda integração deve ocorrer através de contratos bem definidos.
-
-Exemplos:
-
-- APIs
-- Eventos
-- Serviços Compartilhados
-- Interfaces
-
-Nunca acessar diretamente a implementação interna de outro módulo.
+**Escalabilidade** — considerar crescimento de usuários, funcionalidades, equipe e volume de dados desde o início.
 
 ---
 
-# Escalabilidade
+# O que evitar
 
-Toda arquitetura deve considerar:
-
-- crescimento de usuários;
-- crescimento de funcionalidades;
-- crescimento da equipe;
-- crescimento do volume de dados.
-
-A arquitetura deve facilitar esse crescimento sem exigir grandes mudanças estruturais.
-
----
-
-# Reutilização
-
-Sempre que uma funcionalidade puder ser utilizada por mais de um módulo, ela deve ser isolada em um componente compartilhado.
-
-Exemplos:
-
-- autenticação;
-- notificações;
-- pagamentos;
-- inteligência artificial;
-- componentes visuais.
-
----
-
-# Documentação
-
-Toda arquitetura deve possuir documentação própria contendo:
-
-- visão geral;
-- módulos;
-- fluxos;
-- dependências;
-- decisões importantes.
-
-Arquitetura não documentada tende a ser interpretada de maneiras diferentes.
+- Criar arquiteturas complexas sem necessidade real.
+- Acoplar módulos que poderiam ser independentes.
+- Ignorar responsabilidades de camadas.
+- Acessar diretamente a implementação interna de outro módulo.
+- Criar componentes com múltiplas responsabilidades.
+- Duplicar lógica em módulos diferentes.
+- Tomar decisões arquiteturais sem registrar o motivo.
 
 ---
 
